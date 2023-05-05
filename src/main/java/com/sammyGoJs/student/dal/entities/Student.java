@@ -1,9 +1,20 @@
 package com.sammyGoJs.student.dal.entities;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="studenttab")
 public class Student {
+	@Id
 	private Long id;
+	@Column(name="sname")
 	private String name;
+	@Column(name="scourse")
 	private String course;
+	@Column(name="sfees")
 	private Double fees;
 	public Long getId() {
 		return id;
@@ -28,5 +39,9 @@ public class Student {
 	}
 	public void setFees(Double fees) {
 		this.fees = fees;
+	}
+	@Override
+	public String toString() {
+		return "Student [id=" + id + ", name=" + name + ", course=" + course + ", fees=" + fees + "]";
 	}
 }
