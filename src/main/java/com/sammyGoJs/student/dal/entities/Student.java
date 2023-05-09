@@ -11,13 +11,13 @@ import jakarta.persistence.Table;
 @Table(name="studenttab")
 public class Student {
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	@Column(name="sname")
 	private String name;
 	@Column(name="scourse")
 	private String course;
-	@Column(name="sfees")
+	@Column(name="sfee")
 	private Double fees;
 	public Long getId() {
 		return id;
